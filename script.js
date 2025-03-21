@@ -1,58 +1,44 @@
-// Configuração do Firebase
-const firebaseConfig = {
-    apiKey: "SUA-API-KEY",
-    authDomain: "seu-app.firebaseapp.com",
-    projectId: "seu-project-id",
-    storageBucket: "seu-app.appspot.com",
-    messagingSenderId: "seu-sender-id",
-    appId: "seu-app-id"
-};
-const app = firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
-const auth = firebase.auth();
+document.getElementById('play-button').addEventListener('click', function() {
+    startGame();
+});
 
-let saldo = 100;
+function startGame() {
+    let resultado = Math.random() * 100;
+    let message = '';
 
-// Função para atualizar o saldo
-function atualizarSaldo() {
-    document.getElementById("saldo").innerText = saldo;
+    // Decisão do resultado baseado em probabilidade
+    if (resultado < 30) {
+        message = "Você perdeu! Tente novamente.";
+    } else if (resultado < 60) {
+        message = "Você ganhou um prêmio pequeno!";
+    } else {
+        message = "Parabéns! Você ganhou o grande prêmio!";
+    }
+
+    // Mostrar mensagem de resultado
+    alert(message);
+
+    // Animações de fogos de artifício e de rotação do caça-níquel
+    triggerFireworks();
+    rotateReels();
 }
 
-// Função para mostrar o jogo selecionado
-function showJogo(jogo) {
-    let jogos = document.querySelectorAll('.jogo-section');
-    jogos.forEach(jogoElement => {
-        jogoElement.style.display = 'none';
+// Função para ativar os fogos de artifício
+function triggerFireworks() {
+    const fireworks = document.querySelector('.fireworks');
+    fireworks.style.opacity = 1;
+    setTimeout(() => {
+        fireworks.style.opacity = 0;
+    }, 5000);
+}
+
+// Função para animar a rotação dos caça-níqueis
+function rotateReels() {
+    const slots = document.querySelectorAll('.slot');
+    slots.forEach(slot => {
+        slot.style.animation = 'spinReels 2s infinite';
+        setTimeout(() => {
+            slot.style.animation = '';
+        }, 2000);
     });
-    document.getElementById(jogo).style.display = 'block';
 }
-
-// Função para iniciar o jogo Crash
-function startCrash() {
-    let aposta = 10; // Exemplo de valor de aposta
-    saldo -= aposta;
-    atualizarSaldo();
-    alert("Iniciando o jogo Crash!");
-    // Lógica do jogo...
-}
-
-// Função para adicionar saldo
-function adicionarSaldo() {
-    saldo += 50;
-    atualizarSaldo();
-    alert("Saldo adicionado!");
-}
-
-// Função de autenticação de login anônimo
-function loginAnonimo() {
-    auth.signInAnonymously()
-        .then(() => {
-            console.log("Usuário logado com sucesso!");
-        })
-        .catch((error) => {
-            console.error("Erro ao logar", error);
-        });
-}
-
-// Chama a função de login ao carregar a página
-window.onload = loginAnonimo;
