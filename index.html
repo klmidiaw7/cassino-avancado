@@ -1,56 +1,61 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blaze Cassino</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <title>Cassino Online Avançado</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/script.js" defer></script>
 </head>
 <body>
     <header>
-        <div class="logo">🔥 blaze</div>
+        <h1>Bem-vindo ao Cassino Online Avançado</h1>
         <nav>
             <ul>
-                <li><a href="#">Cassino</a></li>
-                <li><a href="#">Esportes</a></li>
-                <li><button class="login-btn">Entrar</button></li>
+                <li><a href="#roleta">Roleta</a></li>
+                <li><a href="#caça-níqueis">Caça-níqueis</a></li>
+                <li><a href="#dados">Dados</a></li>
+                <li><a href="#fogos">Fogos de Artifício</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <div class="game-container">
-            <aside class="menu">
-                <button class="bonus-btn">Ganhe R$20 Grátis</button>
-                <ul>
-                    <li>Crash</li>
-                    <li>Double</li>
-                    <li>Mines</li>
-                    <li>Fruit Slice</li>
-                    <li>Crash Neymar Jr</li>
-                    <li>Fortune Double</li>
-                    <li>Dice</li>
-                    <li>Limbo</li>
-                </ul>
-            </aside>
-            <section class="game-area">
-                <div class="bet-options">
-                    <button class="bet-btn red">x2</button>
-                    <button class="bet-btn white">x14</button>
-                    <button class="bet-btn black">x2</button>
-                    <button class="start-btn">Começar o jogo</button>
-                </div>
-                <div class="roulette">
-                    <div class="spinner">Girando...</div>
-                </div>
-                <div class="history">
-                    <span class="history-item red">5</span>
-                    <span class="history-item black">10</span>
-                    <span class="history-item red">8</span>
-                    <span class="history-item white">14</span>
-                </div>
-            </section>
-        </div>
+        <!-- Roleta -->
+        <section id="roleta">
+            <h2>Roleta</h2>
+            <button id="play-roulette">Jogar Roleta</button>
+            <div id="roulette-result"></div>
+            <canvas id="roulette-wheel"></canvas>
+        </section>
+
+        <!-- Caça-níqueis -->
+        <section id="caça-níqueis">
+            <h2>Caça-níqueis</h2>
+            <button id="play-slots">Jogar Caça-níqueis</button>
+            <div id="slots-result"></div>
+            <div id="slots-reels">
+                <!-- As bobinas podem ser representadas por divs ou imagens -->
+            </div>
+        </section>
+
+        <!-- Dados -->
+        <section id="dados">
+            <h2>Jogo de Dados</h2>
+            <button id="play-dice">Jogar Dados</button>
+            <div id="dice-result"></div>
+        </section>
+
+        <!-- Fogos de Artifício -->
+        <section id="fogos">
+            <h2>Fogos de Artifício</h2>
+            <button id="trigger-fireworks">Ativar Fogos</button>
+            <div id="fireworks"></div>
+        </section>
     </main>
+
+    <footer>
+        <p>&copy; 2025 Cassino Online. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
