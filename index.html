@@ -1,32 +1,37 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casinos Blaze - Jogo Avançado</title>
+    <title>Blaze Cassino</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Background e Animations -->
-    <div class="casino-background">
-        <div class="casino-container">
-            <div class="game-area">
-                <!-- Título e Botões -->
-                <h1>Bem-vindo ao Cassino!</h1>
-                <p>Jogue agora e ganhe prêmios incríveis!</p>
-                <button id="play-button">Jogar</button>
-
-                <!-- Área de Slots (simulada com animação) -->
-                <div id="slot-machine">
-                    <div class="slot reel">🔴</div>
-                    <div class="slot reel">🔵</div>
-                    <div class="slot reel">🟢</div>
+    <div class="casino-container">
+        <header>
+            <h1>Blaze Cassino</h1>
+            <button id="bonus-button">Ganhe R$20 Grátis</button>
+        </header>
+        <main>
+            <div class="game-panel">
+                <h2>Jogue e Ganhe!</h2>
+                <div class="slot-machine">
+                    <div class="slot">🔴</div>
+                    <div class="slot">🔵</div>
+                    <div class="slot">🟢</div>
+                </div>
+                <button id="play-button">Começar o Jogo</button>
+            </div>
+            <div class="previous-results">
+                <h3>Giros Anteriores</h3>
+                <div class="results-list">
+                    <span class="result">🔴</span>
+                    <span class="result">🔵</span>
+                    <span class="result">🟢</span>
                 </div>
             </div>
-            <!-- Efeito de Fogos de Artifício -->
-            <div class="fireworks"></div>
-        </div>
+        </main>
     </div>
 </body>
 </html>
