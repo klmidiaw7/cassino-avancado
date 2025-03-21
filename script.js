@@ -16,11 +16,18 @@ function startGame() {
     }
 
     // Mostrar mensagem de resultado
-    alert(message);
-
-    // Animações de fogos de artifício e de rotação do caça-níquel
+    showMessage(message);
     triggerFireworks();
     rotateReels();
+}
+
+function showMessage(message) {
+    const resultBox = document.getElementById('result-box');
+    resultBox.innerText = message;
+    resultBox.style.opacity = 1;
+    setTimeout(() => {
+        resultBox.style.opacity = 0;
+    }, 3000);
 }
 
 // Função para ativar os fogos de artifício
@@ -36,7 +43,7 @@ function triggerFireworks() {
 function rotateReels() {
     const slots = document.querySelectorAll('.slot');
     slots.forEach(slot => {
-        slot.style.animation = 'spinReels 2s infinite';
+        slot.style.animation = 'spinReels 2s';
         setTimeout(() => {
             slot.style.animation = '';
         }, 2000);
