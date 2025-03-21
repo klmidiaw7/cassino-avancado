@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KL Bet - Cassino Avançado</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>KL Bet 🎰</h1>
+        </div>
+        <div class="saldo">
+            <h2>Saldo: R$ <span id="saldo">100</span></h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showJogo('crash')">🚀 Crash</a></li>
+                <li><a href="#" onclick="showJogo('mines')">💣 Mines</a></li>
+                <li><a href="#" onclick="showJogo('roleta')">🎡 Roleta</a></li>
+                <li><a href="#" onclick="showJogo('dice')">🎲 Dice</a></li>
+                <li><a href="#" onclick="adicionarSaldo()">💰 Adicionar R$50</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="jogos">
+            <div id="crash" class="jogo-section" style="display:none;">
+                <h3>🚀 Jogo Crash</h3>
+                <img src="images/crash_game.png" alt="Crash">
+                <button onclick="startCrash()">Começar Crash</button>
+            </div>
+
+            <div id="mines" class="jogo-section" style="display:none;">
+                <h3>💣 Jogo Mines</h3>
+                <img src="images/mines_game.png" alt="Mines">
+                <button onclick="startMines()">Começar Mines</button>
+            </div>
+
+            <div id="roleta" class="jogo-section" style="display:none;">
+                <h3>🎡 Jogo Roleta</h3>
+                <img src="images/roleta_game.png" alt="Roleta">
+                <button onclick="startRoleta()">Começar Roleta</button>
+            </div>
+
+            <div id="dice" class="jogo-section" style="display:none;">
+                <h3>🎲 Jogo Dice</h3>
+                <img src="images/dice_game.png" alt="Dice">
+                <button onclick="startDice()">Começar Dice</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
