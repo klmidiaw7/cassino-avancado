@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
@@ -8,30 +8,49 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="casino-container">
-        <header>
-            <h1>Blaze Cassino</h1>
-            <button id="bonus-button">Ganhe R$20 Grátis</button>
-        </header>
-        <main>
-            <div class="game-panel">
-                <h2>Jogue e Ganhe!</h2>
-                <div class="slot-machine">
-                    <div class="slot">🔴</div>
-                    <div class="slot">🔵</div>
-                    <div class="slot">🟢</div>
+    <header>
+        <div class="logo">🔥 blaze</div>
+        <nav>
+            <ul>
+                <li><a href="#">Cassino</a></li>
+                <li><a href="#">Esportes</a></li>
+                <li><button class="login-btn">Entrar</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="game-container">
+            <aside class="menu">
+                <button class="bonus-btn">Ganhe R$20 Grátis</button>
+                <ul>
+                    <li>Crash</li>
+                    <li>Double</li>
+                    <li>Mines</li>
+                    <li>Fruit Slice</li>
+                    <li>Crash Neymar Jr</li>
+                    <li>Fortune Double</li>
+                    <li>Dice</li>
+                    <li>Limbo</li>
+                </ul>
+            </aside>
+            <section class="game-area">
+                <div class="bet-options">
+                    <button class="bet-btn red">x2</button>
+                    <button class="bet-btn white">x14</button>
+                    <button class="bet-btn black">x2</button>
+                    <button class="start-btn">Começar o jogo</button>
                 </div>
-                <button id="play-button">Começar o Jogo</button>
-            </div>
-            <div class="previous-results">
-                <h3>Giros Anteriores</h3>
-                <div class="results-list">
-                    <span class="result">🔴</span>
-                    <span class="result">🔵</span>
-                    <span class="result">🟢</span>
+                <div class="roulette">
+                    <div class="spinner">Girando...</div>
                 </div>
-            </div>
-        </main>
-    </div>
+                <div class="history">
+                    <span class="history-item red">5</span>
+                    <span class="history-item black">10</span>
+                    <span class="history-item red">8</span>
+                    <span class="history-item white">14</span>
+                </div>
+            </section>
+        </div>
+    </main>
 </body>
 </html>
